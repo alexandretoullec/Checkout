@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="/base.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Checkout</h1>
+    </header>
+    <section class="main">
+      <section class="mainLeftSection">
+        <div class="mainLeftSection__contact-information">
+          <h2>Contact Information</h2>
+          <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+            <label for="email">E-mail</label><br />
+            <input 
+              name = "email"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="&#xF2b9;  Enter your email..."
+              
+            />
+            <br />
+            <label for="phone">phone</label>
+            <br />
+            <input
+              name="phone"
+              type="phone"
+              id="phone"
+              name="phone"
+              placeholder="&#xF095;  Enter your phone..."
+            />
+          
+        </div>
+        <h2>Shipping address</h2>
+        <div class="mainLeftSection__shipping-adress">
+          
+          
+            <div class="name">
+            <label for="fname">Full Name</label><br />
+            
+            <input
+              type="text"
+              name="fname"
+              id="fname"
+              name="fullname"
+              placeholder="&#xF007;  Your name.."
+            />
+           </div>
+            <div class="adress">
+            <label for="adress">Adress</label>
+            <br />
+            <input
+              name="adress"
+              type="text"
+              id="adress"
+              name="adress"
+              placeholder="&#xf066;  Your adress..."
+            />
+            </div>
+            
+            <div class="city">
+            <label for="city">Your city</label>
+            <br />
+            <input
+              type="text"
+              id="city"
+              name="city"
+              placeholder="&#xf066;  Your city..."
+            />
+            </div>
+            <div class ="counPost">
+            <div class="countryy">
+            <label for="country">Country</label><br />
+            <select class="country fa" id="country" name="country">
+              <option value="australia">&#xf0ac Australia</option>
+              <option value="canada">&#xf0ac Canada</option>
+              <option value="usa">&#xf0ac USA</option>
+              <option value="france">&#xf0ac France</option>
+            </select>
+            </div>
+          
+            <div class="postaly">
+            <label for="postalCode">Your postal code</label>
+            <br />
+            <input
+            class="postal fa"
+            name="postal"
+            type="number"
+            id="postalCode"
+            name="postalCode"
+            placeholder="&#xf066;  Your postal code..."
+            />
+            </div>
+          </div>
+        
+          <br />
+          <div class="save">
+            <input type="checkbox" id="save" name="save" value="save" />
+            <p class="save__p" for="save"> Save this information for next time</p>
+          </div>
+         </div>
+
+          <div class="mainLeftSection__continue">
+          <input type="submit" value="Continue" />
+          </div>
+      </form>
+      </section>
+
+      <section class="mainRightSection">
+        <div class="mainRightSection__article">
+          <div class="article art1">
+            <img src="img/photo1.png" alt="" class="article__img art1" />
+            <h2 class="article__title art1">Vintage Backbag</h2>
+            <p class="article__price__new art1">$54.99</p>
+            <p class="article__price__old art1">$94.99</p>
+            <div class="input-group">
+              <div class="input-group-btn">
+                <button id="down" class="btn btn-default" onclick=" down('0')">
+                  <span class="glyphicon glyphicon-minus">-</span>
+                </button>
+              </div>
+              <input
+                type="text"
+                id="myNumber"
+                class="form-control input-number"
+                value="1"
+              />
+              <div class="input-group-btn">
+                <button id="up" class="btn btn-default" onclick="up('10')">
+                  <span class="glyphicon glyphicon-plus">+</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="article art2">
+            <img src="img/photo2.png" alt="" class="article__img art2" />
+            <h2 class="article__title art2">Levi Shoes</h2>
+            <p class="article__price__new art2">$74.99</p>
+            <p class="article__price__old art2">$124.99</p>
+
+            <div class="input-group">
+              <div class="input-group-btn">
+                <button id="down2" class="btn btn-default" onclick=" down2('0')">
+                  <span class="glyphicon glyphicon-minus">-</span>
+                </button>
+              </div>
+              <input
+                type="text"
+                id="myNumber2"
+                class="form-control input-number"
+                value="1"
+              />
+              <div class="input-group-btn">
+                <button id="up2" class="btn btn-default" onclick="up2('10')">
+                  <span class="glyphicon glyphicon-plus">+</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <hr>
+            
+            <div class="shipping">
+            <h4>
+              Shipping
+            </h4>
+              <span class="shipping__price" style="color: black;"
+                ><i class="shipping__logo fa"></i> <b>$4</b></span
+              >
+            </div>
+            <hr>
+
+            <div class="total">
+            <h4>
+              Total
+            </h4>
+              <span class="price" style="color: black;"
+                ><i class="fa"></i> <b>$139.98</b></span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <footer>created by Alex Dev - devChallenges.io</footer>
+  </body>
+
+  <script src="index.js"></script>
+</html>
